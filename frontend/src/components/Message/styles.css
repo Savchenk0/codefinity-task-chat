@@ -1,0 +1,107 @@
+.messages-container {
+	overflow-y: scroll;
+	height: 422px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+	padding-bottom: 0;
+	padding-right: 10px;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+}
+.messages-wrapper {
+	padding-right: 18px;
+}
+.messages-container::-webkit-scrollbar {
+	width: 17px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+	background: #59788e;
+	border-radius: 30px;
+	border: 3px solid #d7dfe7;
+}
+
+.message {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	width: 74.7%;
+}
+
+.message:nth-last-child(2) {
+	margin-bottom: 0;
+}
+.user-message {
+	align-self: flex-end;
+	position: relative;
+}
+.user-message::after {
+	content: "";
+	position: absolute;
+	top: 62px;
+	right: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #f1f1f1;
+}
+.user-message > .message-header {
+	background-color: #f0cbb3;
+}
+.other-message {
+	align-self: flex-start;
+	position: relative;
+}
+.other-message::before {
+	content: "";
+	position: absolute;
+	top: 62px;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #f1f1f1;
+}
+.other-message > .message-header {
+	background-color: #becbd9;
+}
+.message-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 13px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.message-header--username {
+	font-size: 14px;
+	font-weight: 400;
+}
+.user-message * .message-header--username {
+	color: #703a18;
+}
+.other-message * .message-header--username {
+	color: #203245;
+}
+.other-message * .message-header--timestamp {
+	font-size: 14px;
+	color: #9aa8b7;
+}
+.user-message *.message-header--timestamp {
+	font-size: 14px;
+	color: #bba08e;
+}
+.message-text {
+	font-size: 14px;
+	line-height: 20px;
+	color: #4a4d52;
+	font-weight: 600;
+	background-color: #f4f8fb;
+	padding: 16px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
