@@ -1,7 +1,7 @@
 # Installation<br/>
 
-npm run install-all in root folder<br/>
+`npm run install-all` in root folder<br/>
 
 # To start the app<br/>
 
-npm run start<br/>
+`npm run start` <br/>
